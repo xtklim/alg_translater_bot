@@ -10,7 +10,7 @@ bot = telebot.TeleBot(CHAVE_API)
 @bot.message_handler(commands=["inv"]) 
 def inverso(mensagem):
     regex = r"(^(?:\/inv\s)(([RULDFBMEwS\s]\'?)+))"
-    print(mensagem)
+    #print(mensagem)
     test_str = str(mensagem.text)
     match = re.search(regex, test_str, re.MULTILINE)
     try:
@@ -25,7 +25,7 @@ def inverso(mensagem):
 @bot.message_handler(commands=["rot_x"]) 
 def x(mensagem):
     regex = r"(^(?:\/rot_x\s)(([RULDFBMEwS\s]\'?)+))"
-    print(mensagem)
+    #print(mensagem)
     test_str = str(mensagem.text)
     match = re.search(regex, test_str, re.MULTILINE)
     try:
@@ -43,7 +43,7 @@ def x(mensagem):
 @bot.message_handler(commands=["rot_x2"]) 
 def x2(mensagem):
     regex = r"(^(?:\/rot_x2\s)(([RULDFBMEwS\s]\'?)+))"
-    print(mensagem)
+    #print(mensagem)
     test_str = str(mensagem.text)
     match = re.search(regex, test_str, re.MULTILINE)
     try:
@@ -61,7 +61,7 @@ def x2(mensagem):
 @bot.message_handler(commands=["rot_y"]) 
 def y(mensagem):
     regex = r"(^(?:\/rot_y\s)(([RULDFBMEwS\s]\'?)+))"
-    print(mensagem)
+    #print(mensagem)
     test_str = str(mensagem.text)
     match = re.search(regex, test_str, re.MULTILINE)
     try:
@@ -79,7 +79,7 @@ def y(mensagem):
 @bot.message_handler(commands=["rot_y2"]) 
 def y2(mensagem):
     regex = r"(^(?:\/rot_y2\s)(([RULDFBMEwS\s]\'?)+))"
-    print(mensagem)
+    #print(mensagem)
     test_str = str(mensagem.text)
     match = re.search(regex, test_str, re.MULTILINE)
     try:
@@ -97,7 +97,7 @@ def y2(mensagem):
 @bot.message_handler(commands=["rot_z"]) 
 def z(mensagem):
     regex = r"(^(?:\/rot_z\s)(([RULDFBMEwS\s]\'?)+))"
-    print(mensagem)
+    #print(mensagem)
     test_str = str(mensagem.text)
     match = re.search(regex, test_str, re.MULTILINE)
     try:
@@ -115,7 +115,7 @@ def z(mensagem):
 @bot.message_handler(commands=["rot_z2"]) 
 def z2(mensagem):
     regex = r"(^(?:\/rot_z2\s)(([RULDFBMEwS\s]\'?)+))"
-    print(mensagem)
+    #print(mensagem)
     test_str = str(mensagem.text)
     match = re.search(regex, test_str, re.MULTILINE)
     try:
@@ -150,7 +150,7 @@ exemplo de uso
 /comando R U R' U'
 
 Responder qualquer outra coisa não vai funcionar""" 
-    print(mensagem)
+    #print(mensagem)
     bot.reply_to(mensagem, texto) 
 
 
