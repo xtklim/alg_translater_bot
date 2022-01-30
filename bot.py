@@ -5,7 +5,7 @@ import funcao
 
 
 gta = os.environ["TOKEN"]
-CHAVE_API = "5006595381:AAE0AVNETa3QmxxQ2YonSlQgPItKMM-18Bg" 
+
 bot = telebot.TeleBot(gta) 
 
 
