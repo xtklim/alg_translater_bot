@@ -1,9 +1,12 @@
+import os
 import telebot 
 import re
 import funcao
 
+
+gta = os.environ["TOKEN"]
 CHAVE_API = "5006595381:AAE0AVNETa3QmxxQ2YonSlQgPItKMM-18Bg" 
-bot = telebot.TeleBot(CHAVE_API) 
+bot = telebot.TeleBot(gta) 
 
 
 
@@ -37,7 +40,7 @@ def x(mensagem):
     except:
         texto="""
         Por favor insira o comando corretamente.
-        Exemplo /rot_x R U"""
+    Exemplo /rot_x R U"""
         bot.send_message(mensagem.chat.id, texto)
 
 @bot.message_handler(commands=["rot_x2"]) 
@@ -55,7 +58,7 @@ def x2(mensagem):
     except:
         texto="""
         Por favor insira o comando corretamente.
-        Exemplo /rot_x2 R U"""
+    Exemplo /rot_x2 R U"""
         bot.send_message(mensagem.chat.id, texto)
 
 @bot.message_handler(commands=["rot_y"]) 
@@ -73,7 +76,7 @@ def y(mensagem):
     except:
         texto="""
         Por favor insira o comando corretamente.
-        Exemplo /rot_y R U"""
+    Exemplo /rot_y R U"""
         bot.send_message(mensagem.chat.id, texto)
 
 @bot.message_handler(commands=["rot_y2"]) 
@@ -91,7 +94,7 @@ def y2(mensagem):
     except:
         texto="""
         Por favor insira o comando corretamente.
-        Exemplo /rot_y2 R U"""
+    Exemplo /rot_y2 R U"""
         bot.send_message(mensagem.chat.id, texto)
 
 @bot.message_handler(commands=["rot_z"]) 
@@ -109,7 +112,7 @@ def z(mensagem):
     except:
         texto="""
         Por favor insira o comando corretamente.
-        Exemplo /rot_z R U"""
+    Exemplo /rot_z R U"""
         bot.send_message(mensagem.chat.id, texto)
 
 @bot.message_handler(commands=["rot_z2"]) 
@@ -127,7 +130,7 @@ def z2(mensagem):
     except:
         texto="""
         Por favor insira o comando corretamente.
-        Exemplo /rot_z2 R U"""
+    Exemplo /rot_z2 R U"""
         bot.send_message(mensagem.chat.id, texto)
 
 
