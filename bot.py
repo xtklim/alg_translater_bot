@@ -12,7 +12,7 @@ bot = telebot.TeleBot(gta)
 
 @bot.message_handler(commands=["inv"]) 
 def inverso(mensagem):
-    regex = r"(^(?:\/inv\s)(([RULDFBMEwS\s]\'?)+))"
+    regex = r"(^(?:\/inv(?:@alg_translater_bot)?\s)(([RULDFBMEwS\s2]\'?)+))"
     #print(mensagem)
     test_str = str(mensagem.text)
     match = re.search(regex, test_str, re.MULTILINE)
@@ -27,7 +27,7 @@ def inverso(mensagem):
 
 @bot.message_handler(commands=["rot_x"]) 
 def x(mensagem):
-    regex = r"(^(?:\/rot_x\s)(([RULDFBMEwS\s]\'?)+))"
+    regex = r"(^(?:\/rot_x(?:@alg_translater_bot)?\s)(([RULDFBMEwS\s2]\'?)+))"
     #print(mensagem)
     test_str = str(mensagem.text)
     match = re.search(regex, test_str, re.MULTILINE)
@@ -45,7 +45,7 @@ def x(mensagem):
 
 @bot.message_handler(commands=["rot_x2"]) 
 def x2(mensagem):
-    regex = r"(^(?:\/rot_x2\s)(([RULDFBMEwS\s]\'?)+))"
+    regex = r"(^(?:\/rot_x2(?:@alg_translater_bot)?\s)(([RULDFBMEwS\s2]\'?)+))"
     #print(mensagem)
     test_str = str(mensagem.text)
     match = re.search(regex, test_str, re.MULTILINE)
@@ -63,7 +63,7 @@ def x2(mensagem):
 
 @bot.message_handler(commands=["rot_y"]) 
 def y(mensagem):
-    regex = r"(^(?:\/rot_y\s)(([RULDFBMEwS\s]\'?)+))"
+    regex = r"(^(?:\/rot_y(?:@alg_translater_bot)?\s)(([RULDFBMEwS\s2]\'?)+))"
     #print(mensagem)
     test_str = str(mensagem.text)
     match = re.search(regex, test_str, re.MULTILINE)
@@ -81,7 +81,7 @@ def y(mensagem):
 
 @bot.message_handler(commands=["rot_y2"]) 
 def y2(mensagem):
-    regex = r"(^(?:\/rot_y2\s)(([RULDFBMEwS\s]\'?)+))"
+    regex = r"(^(?:\/rot_y2(?:@alg_translater_bot)?\s)(([RULDFBMEwS\s2]\'?)+))"
     #print(mensagem)
     test_str = str(mensagem.text)
     match = re.search(regex, test_str, re.MULTILINE)
@@ -99,7 +99,7 @@ def y2(mensagem):
 
 @bot.message_handler(commands=["rot_z"]) 
 def z(mensagem):
-    regex = r"(^(?:\/rot_z\s)(([RULDFBMEwS\s]\'?)+))"
+    regex = r"(^(?:\/rot_z(?:@alg_translater_bot)?\s)(([RULDFBMEwS\s2]\'?)+))"
     #print(mensagem)
     test_str = str(mensagem.text)
     match = re.search(regex, test_str, re.MULTILINE)
@@ -117,7 +117,7 @@ def z(mensagem):
 
 @bot.message_handler(commands=["rot_z2"]) 
 def z2(mensagem):
-    regex = r"(^(?:\/rot_z2\s)(([RULDFBMEwS\s]\'?)+))"
+    regex = r"(^(?:\/rot_z2(?:@alg_translater_bot)?\s)(([RULDFBMEwS\s2]\'?)+))"
     #print(mensagem)
     test_str = str(mensagem.text)
     match = re.search(regex, test_str, re.MULTILINE)
