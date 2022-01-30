@@ -139,7 +139,7 @@ def verificar(mensagem):
 
 @bot.message_handler(func=verificar) 
 def responder(mensagem): 
-    texto = """ Escolha uma opção para continuar (Clique no item): 
+    texto = """ Escolha uma opção para continuar (Clique e segure no item): 
 
 /inv inverte um algoritimo
 /rot_x rotacao no eixo x o algoritimo
