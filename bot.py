@@ -8,7 +8,26 @@ gta = os.environ["TOKEN"]
 
 bot = telebot.TeleBot(gta) 
 
-
+def alg_cubing(b):
+    url = "https://alg.cubing.net/?type=alg&alg="
+    
+    c = url + b
+    regex_1 = "\'"
+    subst_1 = "-"
+    test_str = c
+    result_1 = re.sub(regex_1, subst_1, test_str, 0, re.MULTILINE)
+    
+    regex_2 = "\s"
+    subst_2 = "_"
+    test_str2 = result_1
+    result_2 = re.sub(regex_2, subst_2, test_str2, 0, re.MULTILINE)
+    
+    regex_3 = "_$"
+    subst_3 = ""
+    test_str3 = result_2
+    result_end = re.sub(regex_3, subst_3, test_str3, 0, re.MULTILINE)
+    
+    return result_end
 
 @bot.message_handler(commands=["inv"]) 
 def inverso(mensagem):
@@ -21,7 +40,8 @@ def inverso(mensagem):
         scramble = a
         b = funcao.inv(scramble)
         print(b)
-        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s" %(b))
+        c = alg_cubing(b)
+        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
     except:
         bot.send_message(mensagem.chat.id, "Insira o algoritimo logo apos o /inv com um espaco")
 
@@ -36,7 +56,8 @@ def x(mensagem):
         scramble = a
         b = funcao.rotacao_x(scramble)
         print(b)
-        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s" %(b))
+        c = alg_cubing(b)
+        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
     except:
         texto="""
         Por favor insira o comando corretamente.
@@ -54,7 +75,8 @@ def x2(mensagem):
         scramble = a
         b = funcao.rotacao_x2(scramble)
         print(b)
-        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s" %(b))
+        c = alg_cubing(b)
+        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
     except:
         texto="""
         Por favor insira o comando corretamente.
@@ -72,7 +94,8 @@ def y(mensagem):
         scramble = a
         b = funcao.rotacao_y(scramble)
         print(b)
-        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s" %(b))
+        c = alg_cubing(b)
+        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
     except:
         texto="""
         Por favor insira o comando corretamente.
@@ -90,7 +113,8 @@ def y2(mensagem):
         scramble = a
         b = funcao.rotacao_y2(scramble)
         print(b)
-        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s" %(b))
+        c = alg_cubing(b)
+        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
     except:
         texto="""
         Por favor insira o comando corretamente.
@@ -108,7 +132,8 @@ def z(mensagem):
         scramble = a
         b = funcao.rotacao_z(scramble)
         print(b)
-        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s" %(b))
+        c = alg_cubing(b)
+        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
     except:
         texto="""
         Por favor insira o comando corretamente.
@@ -126,7 +151,8 @@ def z2(mensagem):
         scramble = a
         b = funcao.rotacao_z2(scramble)
         print(b)
-        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s" %(b))
+        c = alg_cubing(b)
+        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
     except:
         texto="""
         Por favor insira o comando corretamente.
