@@ -185,7 +185,7 @@ def z2(mensagem):
         markup.row_width = 1
         markup.add(
         InlineKeyboardButton("Ver alg", c))
-        bot.send_message(mensagem.chat.id, f"Ola {name}\nNovo algoritimo rsrs : {b}\nLink para o alg cubing : {c}")
+        bot.send_message(mensagem.chat.id, f"Ola {name}\nNovo algoritimo rsrs : {b}\nLink para o alg cubing :", reply_markup=markup)
     except:
         texto="""
         Por favor insira o comando corretamente.
