@@ -212,7 +212,7 @@ exemplo de uso
 /comando R U R' U'
 
 Responder qualquer outra coisa não vai funcionar""" 
-    #print(mensagem)
+    print(mensagem)
     bot.reply_to(mensagem, texto) 
 
 
