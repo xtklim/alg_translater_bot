@@ -43,7 +43,8 @@ def inverso(mensagem):
         scramble = a
         b = funcao.inv(scramble)
         print(b)
-        name = mensagem.chat.first_name
+        name = mensagem.from_user.first_name
+        print(name)
         c = alg_cubing(b)
         markup = InlineKeyboardMarkup()
         markup.row_width = 1
@@ -64,7 +65,8 @@ def x(mensagem):
         scramble = a
         b = funcao.rotacao_x(scramble)
         print(b)
-        name = mensagem.chat.first_name
+        name = mensagem.from_user.first_name
+        print(name)
         c = alg_cubing(b)
         markup = InlineKeyboardMarkup()
         markup.row_width = 1
@@ -88,7 +90,8 @@ def x2(mensagem):
         scramble = a
         b = funcao.rotacao_x2(scramble)
         print(b)
-        name = mensagem.chat.first_name
+        name = mensagem.from_user.first_name
+        print(name)
         c = alg_cubing(b)
         markup = InlineKeyboardMarkup()
         markup.row_width = 1
@@ -112,7 +115,8 @@ def y(mensagem):
         scramble = a
         b = funcao.rotacao_y(scramble)
         print(b)
-        name = mensagem.chat.first_name
+        name = mensagem.from_user.first_name
+        print(name)
         c = alg_cubing(b)
         markup = InlineKeyboardMarkup()
         markup.row_width = 1
@@ -136,7 +140,8 @@ def y2(mensagem):
         scramble = a
         b = funcao.rotacao_y2(scramble)
         print(b)
-        name = mensagem.chat.first_name
+        name = mensagem.from_user.first_name
+        print(name)
         c = alg_cubing(b)
         markup = InlineKeyboardMarkup()
         markup.row_width = 1
@@ -160,7 +165,8 @@ def z(mensagem):
         scramble = a
         b = funcao.rotacao_z(scramble)
         print(b)
-        name = mensagem.chat.first_name
+        name = mensagem.from_user.first_name
+        print(name)
         c = alg_cubing(b)
         markup = InlineKeyboardMarkup()
         markup.row_width = 1
@@ -185,7 +191,8 @@ def z2(mensagem):
         scramble = a
         b = funcao.rotacao_z2(scramble)
         print(b)
-        name = mensagem.chat.first_name
+        name = mensagem.from_user.first_name
+        print(name)
         c = alg_cubing(b)
         markup = InlineKeyboardMarkup()
         markup.row_width = 1
