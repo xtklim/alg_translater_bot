@@ -65,6 +65,10 @@ def x(mensagem):
         b = funcao.rotacao_x(scramble)
         print(b)
         c = alg_cubing(b)
+        markup = InlineKeyboardMarkup()
+        markup.row_width = 1
+        markup.add(
+        InlineKeyboardButton("Ver alg", c))
         bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
     except:
         texto="""
@@ -84,6 +88,10 @@ def x2(mensagem):
         b = funcao.rotacao_x2(scramble)
         print(b)
         c = alg_cubing(b)
+        markup = InlineKeyboardMarkup()
+        markup.row_width = 1
+        markup.add(
+        InlineKeyboardButton("Ver alg", c))
         bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
     except:
         texto="""
@@ -103,6 +111,10 @@ def y(mensagem):
         b = funcao.rotacao_y(scramble)
         print(b)
         c = alg_cubing(b)
+        markup = InlineKeyboardMarkup()
+        markup.row_width = 1
+        markup.add(
+        InlineKeyboardButton("Ver alg", c))
         bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
     except:
         texto="""
@@ -122,6 +134,10 @@ def y2(mensagem):
         b = funcao.rotacao_y2(scramble)
         print(b)
         c = alg_cubing(b)
+        markup = InlineKeyboardMarkup()
+        markup.row_width = 1
+        markup.add(
+        InlineKeyboardButton("Ver alg", c))
         bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
     except:
         texto="""
@@ -141,6 +157,10 @@ def z(mensagem):
         b = funcao.rotacao_z(scramble)
         print(b)
         c = alg_cubing(b)
+        markup = InlineKeyboardMarkup()
+        markup.row_width = 1
+        markup.add(
+        InlineKeyboardButton("Ver alg", c))
         bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
     except:
         texto="""
@@ -159,8 +179,13 @@ def z2(mensagem):
         scramble = a
         b = funcao.rotacao_z2(scramble)
         print(b)
+        name = message.from_user.username
         c = alg_cubing(b)
-        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
+        markup = InlineKeyboardMarkup()
+        markup.row_width = 1
+        markup.add(
+        InlineKeyboardButton("Ver alg", c))
+        bot.send_message(mensagem.chat.id, f"Ola {name}\nNovo algoritimo rsrs : {b}\nLink para o alg cubing : {c}")
     except:
         texto="""
         Por favor insira o comando corretamente.
