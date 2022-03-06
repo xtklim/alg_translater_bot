@@ -179,7 +179,7 @@ def z2(mensagem):
         scramble = a
         b = funcao.rotacao_z2(scramble)
         print(b)
-        name = message.from_user.username
+        name = message.chat.first_name
         c = alg_cubing(b)
         markup = InlineKeyboardMarkup()
         markup.row_width = 1
