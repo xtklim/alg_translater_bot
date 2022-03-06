@@ -7,7 +7,6 @@ import funcao
 #A variavel gta vai guardar o seu token do bot
 #Ou vc pode passar o seu token para variavel
 gta = os.environ["TOKEN"]
-
 bot = telebot.TeleBot(gta)
 
 
@@ -44,12 +43,13 @@ def inverso(mensagem):
         scramble = a
         b = funcao.inv(scramble)
         print(b)
+        name = mensagem.chat.first_name
         c = alg_cubing(b)
         markup = InlineKeyboardMarkup()
         markup.row_width = 1
         markup.add(
         InlineKeyboardButton("Ver alg", c))
-        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing" %(b), reply_markup=markup)
+        bot.send_message(mensagem.chat.id, f"Ola {name}\nNovo algoritimo rsrs : {b}\nLink para o alg cubing :", reply_markup=markup)
     except:
         bot.send_message(mensagem.chat.id, "Insira o algoritimo logo apos o /inv com um espaco")
 
@@ -64,12 +64,13 @@ def x(mensagem):
         scramble = a
         b = funcao.rotacao_x(scramble)
         print(b)
+        name = mensagem.chat.first_name
         c = alg_cubing(b)
         markup = InlineKeyboardMarkup()
         markup.row_width = 1
         markup.add(
         InlineKeyboardButton("Ver alg", c))
-        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
+        bot.send_message(mensagem.chat.id, f"Ola {name}\nNovo algoritimo rsrs : {b}\nLink para o alg cubing :", reply_markup=markup)
     except:
         texto="""
         Por favor insira o comando corretamente.
@@ -87,12 +88,13 @@ def x2(mensagem):
         scramble = a
         b = funcao.rotacao_x2(scramble)
         print(b)
+        name = mensagem.chat.first_name
         c = alg_cubing(b)
         markup = InlineKeyboardMarkup()
         markup.row_width = 1
         markup.add(
         InlineKeyboardButton("Ver alg", c))
-        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
+        bot.send_message(mensagem.chat.id, f"Ola {name}\nNovo algoritimo rsrs : {b}\nLink para o alg cubing :", reply_markup=markup)
     except:
         texto="""
         Por favor insira o comando corretamente.
@@ -110,12 +112,13 @@ def y(mensagem):
         scramble = a
         b = funcao.rotacao_y(scramble)
         print(b)
+        name = mensagem.chat.first_name
         c = alg_cubing(b)
         markup = InlineKeyboardMarkup()
         markup.row_width = 1
         markup.add(
         InlineKeyboardButton("Ver alg", c))
-        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
+        bot.send_message(mensagem.chat.id, f"Ola {name}\nNovo algoritimo rsrs : {b}\nLink para o alg cubing :", reply_markup=markup)
     except:
         texto="""
         Por favor insira o comando corretamente.
@@ -133,12 +136,13 @@ def y2(mensagem):
         scramble = a
         b = funcao.rotacao_y2(scramble)
         print(b)
+        name = mensagem.chat.first_name
         c = alg_cubing(b)
         markup = InlineKeyboardMarkup()
         markup.row_width = 1
         markup.add(
         InlineKeyboardButton("Ver alg", c))
-        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
+        bot.send_message(mensagem.chat.id, f"Ola {name}\nNovo algoritimo rsrs : {b}\nLink para o alg cubing :", reply_markup=markup)
     except:
         texto="""
         Por favor insira o comando corretamente.
@@ -156,12 +160,13 @@ def z(mensagem):
         scramble = a
         b = funcao.rotacao_z(scramble)
         print(b)
+        name = mensagem.chat.first_name
         c = alg_cubing(b)
         markup = InlineKeyboardMarkup()
         markup.row_width = 1
         markup.add(
         InlineKeyboardButton("Ver alg", c))
-        bot.send_message(mensagem.chat.id, "Novo algoritimo rsrs : %s\nLink para o alg cubing : %s" %(b, c))
+        bot.send_message(mensagem.chat.id, f"Ola {name}\nNovo algoritimo rsrs : {b}\nLink para o alg cubing :", reply_markup=markup)
     except:
         texto="""
         Por favor insira o comando corretamente.
@@ -174,18 +179,19 @@ def z2(mensagem):
     #print(mensagem)
     test_str = str(mensagem.text)
     match = re.search(regex, test_str, re.MULTILINE)
+    print(mensagem.chat.first_name)
     try:
         a = match.group(2)
         scramble = a
         b = funcao.rotacao_z2(scramble)
         print(b)
-        name = message.chat.first_name
+        name = mensagem.chat.first_name
         c = alg_cubing(b)
         markup = InlineKeyboardMarkup()
         markup.row_width = 1
         markup.add(
         InlineKeyboardButton("Ver alg", c))
-        bot.send_message(mensagem.chat.id, "Ola %s\nNovo algoritimo rsrs : %s\nLink para o alg cubing :" %(name, b), reply_markup=markup)
+        bot.send_message(mensagem.chat.id, f"Ola {name}\nNovo algoritimo rsrs : {b}\nLink para o alg cubing :", reply_markup=markup)
     except:
         texto="""
         Por favor insira o comando corretamente.
