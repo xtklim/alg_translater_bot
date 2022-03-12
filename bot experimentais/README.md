@@ -1,1 +1,0 @@
-simples teste de bots
